@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="has-text-centered">
+            <h1 class="title is-2">{{ section.title }}</h1>
+            <p class="subtitle is-4">{{ section.description }}</p>
+            {% if config.extra.author.avatar %}
+            <figure class="image is-flex is-justify-content-center is-align-items-center">
+                <img class="is-rounded" src="{{ config.extra.author.avatar }}" style="max-width: 192px" />
+            </figure>
+            {% endif %}
+            {{ macros:: social_links( social_config=config.extra.social) }}
+        </div>
+        <div class="content">
+            {{ section.content | safe }}
+            <h2 id="featured-projects">Featured Projects</h2>
+            <h3 id="applications-and-services">Applications and Services</h3>
+            {% set applications = load_data(path="content/applications.json") %}
+            <ul>
+                {% for application in applications %}
+                <li><strong><a href="{{ application.url }}">{{ application.title }}</a></strong>: {{
+                    application.description }}</li>
+                {% endfor %}
+            </ul>
+            <h3 id="libraries">Libraries</h3>
+            {% set libraries = load_data(path="content/libraries.json") %}
+            <ul>
+                {% for library in libraries %}
+                <li><strong><a href="{{ library.url }}">{{ library.title }}</a></strong>: {{ library.description }}
+                </li>
+                {% endfor %}
+            </ul>
+            <h2 id="meetups">Meetups</h2>
+        </div>
+    </div>
+</section>
+{% endblock %}

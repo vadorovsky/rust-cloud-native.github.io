@@ -1,0 +1,27 @@
+[
+    {
+        "title": "CNI Plugins",
+        "url": "https://github.com/passcod/cni-plugins",
+        "description": "crate/framework to write CNI (container networking) plugins in Rust (includes a few custom plugins as well)"
+    },
+    {
+        "title": "containers/libkrun",
+        "url": "https://github.com/containers/libkrun",
+        "description": "a dynamic library providing Virtualization-based process isolation capabilities"
+    },
+    {
+        "title": "kube-rs/kube-rs",
+        "url": "https://github.com/kube-rs/kube-rs",
+        "description": "Kubernetes Rust client and async controller runtime"
+    },
+    {
+        "title": "open-telemetry/opentelemetry-rust",
+        "url": "https://github.com/open-telemetry/opentelemetry-rust",
+        "description": "OpenTelemetry is a set of APIs, SDKs, tooling and integrations that are designed for the creation and management of telemetry data such as traces, metrics, and logs."
+    },
+    {
+        "title": "qovery/engine",
+        "url": "https://github.com/Qovery/engine",
+        "description": "An open-source abstraction layer library that turns easy apps deployment on AWS, GCP, Azure, and other Cloud providers"
+    }
+]
